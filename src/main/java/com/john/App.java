@@ -1,11 +1,11 @@
 package com.john;
 
-/**
- * Hello world!
- */
+import com.john.element.Number;
+
 public class App {
     public static void main(String[] args) {
 
+        Number num = new Number();
 
     }
 }
