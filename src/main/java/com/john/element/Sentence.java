@@ -1,6 +1,11 @@
 package com.john.element;
 
-public class Sentence {
+import com.john.element.Composit.AbstractComposite;
+
+import java.util.List;
+
+public class Sentence extends AbstractComposite<Sentence> {
+    private List<Sentence> sentences;
     public Sentence() {
     }
 }
