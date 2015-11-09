@@ -1,15 +1,11 @@
 package com.john.PropertyManager;
 
-
-import com.john.App;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
 public final class PropertyManager {
-    private final static String DEFAULT_PROPERTIES_FILE = "default.properties";
-    private final static String REGEX_PROPERTIES_FILE = "regex.properties";
+    private final static String APP_PROPERTIES_FILE = "add.properties";
 
     public static PropertyManager instance = null;
     private Properties properties = new Properties();
@@ -30,11 +26,7 @@ public final class PropertyManager {
     }
 
     private void loadProperties() throws IOException {
-        InputStream in = App.class.getClassLoader().getResourceAsStream(DEFAULT_PROPERTIES_FILE);
-        properties.load(in);
-        in.close();
-
-        in = App.class.getClassLoader().getResourceAsStream(REGEX_PROPERTIES_FILE);
+        InputStream in = PropertyManager.class.getClassLoader().getResourceAsStream(APP_PROPERTIES_FILE);
         properties.load(in);
         in.close();
     }
